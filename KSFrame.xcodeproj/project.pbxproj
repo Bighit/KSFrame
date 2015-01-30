@@ -156,7 +156,6 @@
 		49B576C81A7221F6002D8876 /* MacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDefine.h; sourceTree = "<group>"; };
 		49B576C91A7221F6002D8876 /* NetworkAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkAPI.h; sourceTree = "<group>"; };
 		49B576CA1A7221F6002D8876 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		49B576CC1A7221F6002D8876 /* CategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryHeader.h; sourceTree = "<group>"; };
 		49B576CD1A7221F6002D8876 /* NSData+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Addition.h"; sourceTree = "<group>"; };
 		49B576CE1A7221F6002D8876 /* NSData+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Addition.m"; sourceTree = "<group>"; };
 		49B576CF1A7221F6002D8876 /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
@@ -205,6 +204,7 @@
 		49C49AAE1A398317004F0DE7 /* KSFrameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSFrameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C49AB31A398317004F0DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49C49AB41A398317004F0DE7 /* KSFrameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSFrameTests.m; sourceTree = "<group>"; };
+		49C9FBF01A78908E006E7293 /* APPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHeader.h; sourceTree = "<group>"; };
 		5CE905872262C3F07990DBB4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9A098486C14A3FAEEDABCA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -390,6 +390,7 @@
 		49B576C51A7221F6002D8876 /* APPDefine */ = {
 			isa = PBXGroup;
 			children = (
+				49C9FBF01A78908E006E7293 /* APPHeader.h */,
 				49B576C61A7221F6002D8876 /* AppConfig.h */,
 				49B576C71A7221F6002D8876 /* KSFrame.strings */,
 				49B576C81A7221F6002D8876 /* MacroDefine.h */,
@@ -402,7 +403,6 @@
 		49B576CB1A7221F6002D8876 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				49B576CC1A7221F6002D8876 /* CategoryHeader.h */,
 				49B576CD1A7221F6002D8876 /* NSData+Addition.h */,
 				49B576CE1A7221F6002D8876 /* NSData+Addition.m */,
 				49B576CF1A7221F6002D8876 /* NSDate+Addition.h */,

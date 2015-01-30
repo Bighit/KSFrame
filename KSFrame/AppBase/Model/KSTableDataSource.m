@@ -9,19 +9,19 @@
 #import "KSTableDataSource.h"
 
 @interface KSTableDataSource ()
-@property (copy, nonatomic) NSString *cellIdentifier;
+
 
 
 @end
 
 @implementation KSTableDataSource
 
-- (id)initWithCellIdentifier:(NSString *)cellIdentifier cellconfigureBlock:(UITableViewCell *(^)(UITableViewCell *cell, id cellDatas, NSIndexPath *indexPath))cellConfigureBlock
+- (id)initWithCellClassName:(NSString *)cellClassName cellconfigureBlock:(UITableViewCell *(^)(UITableViewCell *cell, id cellDatas, NSIndexPath *indexPath))cellConfigureBlock
 {
     self = [super init];
     if (self)
     {
-        self.cellIdentifier = cellIdentifier;
+        self.cellClassName = cellClassName;
         self.cellConfigureBlock = [cellConfigureBlock copy];
         self.tableItems = [NSMutableArray array];
     }
@@ -29,7 +29,7 @@
 }
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[self.tableItems objectAtIndex:0] isKindOfClass:[NSArray class]]) {
+    if ([_tableItems  count]>0&&[[self.tableItems objectAtIndex:0] isKindOfClass:[NSArray class]]) {
         return self.tableItems[indexPath.section][indexPath.row];
     }else
     {
@@ -42,7 +42,7 @@
 #pragma mark - TableView Datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if ([[self.tableItems objectAtIndex:0] isKindOfClass:[NSArray class]]) {
+    if ([_tableItems  count]>0&&[[self.tableItems objectAtIndex:0] isKindOfClass:[NSArray class]]) {
         return [self.tableItems count];
     }else
     {
@@ -51,7 +51,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if ([[self.tableItems objectAtIndex:0] isKindOfClass:[NSArray class]]) {
+    if ([_tableItems  count]>0&&[[self.tableItems objectAtIndex:0] isKindOfClass:[NSArray class]]) {
         return [[self.tableItems objectAtIndex:section] count];
     }else
     {
@@ -62,7 +62,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellClassName];
+    if (!cell) {
+        cell=[[NSClassFromString(_cellClassName) alloc]init];
+    }
     id item = [self itemAtIndexPath:indexPath];
     return self.CellConfigureBlock(cell,item,indexPath);
     

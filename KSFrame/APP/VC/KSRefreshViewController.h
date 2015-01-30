@@ -8,11 +8,10 @@
 
 #import "KSViewController.h"
 
-@interface KSRefreshViewController : KSViewController<SSPullToRefreshViewDelegate>
-@property(nonatomic,strong)SSPullToRefreshView *pullToRefreshView;
+@interface KSRefreshViewController : KSViewController
 @property(nonatomic,strong)MBProgressHUD *progressHUD;
 @property(nonatomic,strong)id data;//数据
-@property(nonatomic,strong)NSDictionary* params;//参数
+@property(nonatomic,strong)NSMutableDictionary* params;//参数
 - (void)refresh;
 -(void)setViewContentSize:(CGSize)size;
 @end

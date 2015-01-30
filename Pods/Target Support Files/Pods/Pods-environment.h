@@ -48,12 +48,6 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
-// EGOTableViewPullRefreshAndLoadMore
-#define COCOAPODS_POD_AVAILABLE_EGOTableViewPullRefreshAndLoadMore
-#define COCOAPODS_VERSION_MAJOR_EGOTableViewPullRefreshAndLoadMore 1
-#define COCOAPODS_VERSION_MINOR_EGOTableViewPullRefreshAndLoadMore 0
-#define COCOAPODS_VERSION_PATCH_EGOTableViewPullRefreshAndLoadMore 4
-
 // IQKeyboardManager
 #define COCOAPODS_POD_AVAILABLE_IQKeyboardManager
 // This library does not follow semantic-versioning,
@@ -73,9 +67,9 @@
 #define COCOAPODS_VERSION_MINOR_Masonry 6
 #define COCOAPODS_VERSION_PATCH_Masonry 0
 
-// SSPullToRefresh
-#define COCOAPODS_POD_AVAILABLE_SSPullToRefresh
-#define COCOAPODS_VERSION_MAJOR_SSPullToRefresh 1
-#define COCOAPODS_VERSION_MINOR_SSPullToRefresh 2
-#define COCOAPODS_VERSION_PATCH_SSPullToRefresh 2
+// SVPullToRefresh
+#define COCOAPODS_POD_AVAILABLE_SVPullToRefresh
+#define COCOAPODS_VERSION_MAJOR_SVPullToRefresh 0
+#define COCOAPODS_VERSION_MINOR_SVPullToRefresh 4
+#define COCOAPODS_VERSION_PATCH_SVPullToRefresh 1
 

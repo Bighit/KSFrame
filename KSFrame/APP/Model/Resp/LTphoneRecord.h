@@ -18,7 +18,7 @@
 @property (nonatomic,strong) NSString *amount;
 @property (nonatomic,strong) NSString *status;
 @property (nonatomic,strong) NSString *result;
-@property (nonatomic,strong) NSString *win_tax_money;
+@property (nonatomic,strong) NSString *winMoney;
 @property (nonatomic,strong) NSString *number;
 
 @end

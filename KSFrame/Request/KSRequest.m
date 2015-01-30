@@ -36,6 +36,7 @@ kSingleton(KSRequest)
     AFHTTPRequestOperationManager   *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:urlTemp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLogData(responseObject);
         NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         success([self reflectDataObject:objClass FromOtherObject:dic]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -71,8 +72,7 @@ kSingleton(KSRequest)
     [manager POST:urlTemp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         id obj = [[objClass alloc]init];
         NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        [self reflectDataObject:obj FromOtherObject:dic];
-            success(obj);
+        success([self reflectDataObject:obj FromOtherObject:dic]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         fail(error.description);
     }];
@@ -85,7 +85,6 @@ kSingleton(KSRequest)
         for (id obj in dataSource) {
             [arr addObject:[self reflectDataObject:class FromOtherObject:obj]];
         }
-        NSLog(@"%@",[arr class]);
         return arr;
     }else if ([dataSource isKindOfClass:[NSDictionary class]]) {
         id data=[[class alloc]init];
@@ -98,7 +97,6 @@ kSingleton(KSRequest)
                     // 该值不为NSNULL，并且也不为nil
                 }
             }
-        NSLog(@"%@",[data class]);
         return data;
     }else {
         if (![dataSource isKindOfClass:[NSNull class]] && (dataSource != nil)) {

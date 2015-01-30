@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-EGOTableViewPullRefreshAndLoadMore.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SSPullToRefresh.xcscheme</key>
+		<key>Pods-SVPullToRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1BB29289E45D2F6A4B17794E</key>
+		<key>004C3715BCA51BC66FAD8767</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>258F54B5FB89F83B5213B5D0</key>
+		<key>75BFEE72D996C4A09503DE09</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>584953FDF1466F76ABA34E4F</key>
+		<key>8ABAF047CA7E6B448DA4BC93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68E6354DB82572F47033CD45</key>
+		<key>CA16E61FCDE61AC6C9C12000</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75A688516FC824057A34A9D7</key>
+		<key>E5D76ECAF69EF4100811F4E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>844CCA9569ECAD03DD7992B6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8BAFC57CD46DC3CCEDCD2804</key>
+		<key>F081281511AF57F665A0CEAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

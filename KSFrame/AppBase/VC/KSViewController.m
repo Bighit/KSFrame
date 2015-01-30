@@ -9,11 +9,14 @@
 #import "KSViewController.h"
 
 @implementation KSViewController
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (self.navigationController) {
+    if (self.navigationController&&!self.navigationController.navigationBar.hidden) {
         self.navigationController.navigationBar.translucent=NO;
+    }if (self.navigationController&&!self.navigationController.navigationBar.hidden) {
+        self.tabBarController.tabBar.translucent=NO;
     }
 }
 - (void)showBarButton:(KSNavigationBarItemPositon)position title:(NSString *)name fontColor:(UIColor *)color{

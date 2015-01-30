@@ -13,8 +13,6 @@
 #import "KSphoneUserInfo.h"
 @interface KSUserCenterViewController :KSRefreshViewController
 @property(nonatomic,strong)NSString *cellIentifier;
-@property (nonatomic,strong)KSTableDataSource *tableDataSource;
-@property (nonatomic,strong)KSTableDelegate *tableDelegate;
 @property(nonatomic,strong)KSUserCenter *viewWithXib;
 @property(nonatomic,strong)KSphoneUserInfo *userInfo;
 @property(nonatomic,strong)NSMutableArray *tableItems;

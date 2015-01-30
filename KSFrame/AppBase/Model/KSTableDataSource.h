@@ -13,9 +13,10 @@
 
 
 @interface KSTableDataSource : NSObject <UITableViewDataSource>
+@property (strong, nonatomic) NSString *cellClassName;
 @property (strong, nonatomic) NSMutableArray *tableItems;
 @property (copy, nonatomic) UITableViewCell* (^CellConfigureBlock) (UITableViewCell *cell, id cellDatas, NSIndexPath *indexPath);
-- (id)initWithCellIdentifier:(NSString *)cellIdentifier
+- (id)initWithCellClassName:(NSString *)cellClassName
           cellconfigureBlock:(UITableViewCell *(^)(UITableViewCell *cell, id cellDatas, NSIndexPath *indexPath))cellConfigureBlock;
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;

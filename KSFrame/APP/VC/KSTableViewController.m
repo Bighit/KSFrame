@@ -13,90 +13,125 @@
 @end
 
 @implementation KSTableViewController
-
-- (void)viewDidLoad {
+- (void)loadView
+{
+    [super loadView];
+    // 将view替换成scrollview
+    self.tableView = [[KSTableView alloc]init];
+    self.view = self.tableView;
+    [_tableView setBackgroundColor:[UIColor whiteColor]];
+    //上拉加载 下拉刷新
+    WS(_self)
     
+    [_tableView addPullToRefreshWithActionHandler :^{
+        [_self performSelector:@selector(loadMore) withObject:nil afterDelay:0.2];
+    }position:SVPullToRefreshPositionBottom];
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    self.tableView=[[KSTableView alloc]init];
-    [self.view addSubview:_tableView];
+    self.pageCount = 1;
     [self setTableViewDataSource];
     [self setTableViewDelegate];
+    [_tableView registerNib:[UINib nibWithNibName:_tableView.tableDataSource.cellClassName bundle:nil] forCellReuseIdentifier:_tableView.tableDataSource.cellClassName];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self pullToRefresh];
+   
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - Table DataSource && Delegate
 
 - (void)setTableViewDataSource
 {
- 
-    self.tableDataSource = [[KSTableDataSource alloc] initWithCellIdentifier:[self description] cellconfigureBlock:^UITableViewCell *(UITableViewCell *cell, id cellDatas, NSIndexPath *indexPath) {
-        if (cell==nil) {
-            cell=[[KSTableViewCell alloc]init];
-        }
-        //加载数据
+    // 子类完成
+    self.tableView.tableDataSource.cellClassName = NSStringFromClass([UITableViewCell class]);
+    [self.tableView.tableDataSource setCellConfigureBlock:^UITableViewCell *(UITableViewCell *cell, id cellDatas, NSIndexPath *indexpath) {
         return cell;
     }];
-    self.tableDataSource.tableItems=self.data;
-    [self.tableView setDataSource:self.tableDataSource];
 }
 
 - (void)setTableViewDelegate
 {
-    WS(_self)
-    self.tableDelegate = [[KSTableDelegate alloc] init];
-    self.tableDelegate.tableItems=self.data;
-    [self.tableDelegate setCellHeightBlock:^(NSIndexPath *indexPath)
-     {
-         //加载cell 高度
-         KSTableViewCell *tableViewCell=(KSTableViewCell *)[_self.tableView cellForRowAtIndexPath:indexPath];
-         return [tableViewCell cellViewFrame].size.height;
-     }];
-    [self.tableDelegate setSelectCellBlock:^(NSIndexPath *indexPath, id item)
-     {
-         //点击cell时候触发的事件
-     }];
-    
-    [self.tableView setDelegate:self.tableDelegate];
-}
--(void)refresh
-{
-    [self.tableView reloadData];
-}
-#pragma mark - loadMore
-- (void)loadMoreTableFooterDidTriggerLoadMore:(LoadMoreTableFooterView*)view
-{
-    [self refresh];
-}
-- (BOOL)loadMoreTableFooterDataSourceIsLoading:(LoadMoreTableFooterView*)view
-{
-    WS(_self)
-    [Single(KSRequest)requestDataWithParams:nil Class:[self.data class] finished:^(id object) {
-        NSMutableArray *arr=[[NSMutableArray alloc]initWithArray:_self.data];
-        if ([object isKindOfClass:[NSArray class]]) {
-            [arr addObjectsFromArray:object];
-        }
-        [_self refresh];
-    } failed:^(NSString *error) {
-        NSLog(@"网络问题");
+    // 子类完成
+    [self.tableView.tableDelegate setCellHeightBlock:^CGFloat (NSIndexPath *indexPath) {
+        return 40;
     }];
-    return YES;
 }
 
+- (void)refresh
+{
+    [super refresh];
+    [self.params setObject:[NSString stringWithFormat:@"%lu",self.pageCount] forKey:@"page"];
+    [self.tableView reloadData];
+    NSLog(@"数据总数：%lu，页码：%lu", [_tableView.tableItems count], _pageCount-1);
+}
+
+- (void)pullToRefresh
+{
+    WS(_self)
+    [mKeyWindow addSubview : self.progressHUD];
+    [self.progressHUD show:YES];
+    [Singleton(KSRequest)requestDataWithParams:self.params Class:[self.data class] finished:^(id object) {
+        if ([object isKindOfClass:[NSArray class]]) {
+            [_tableView.tableItems setArray:object];
+            self.pageCount++;
+        } else {
+            _self.data = object;
+        }
+
+        [_self refresh];
+        [_self.progressHUD hide:YES];
+        [_self.progressHUD removeFromSuperview];
+    } failed:^(NSString *error) {
+        mAlertView(@"提示", @"网络无法连接");
+        [_self.progressHUD hide:YES];
+        [_self.progressHUD removeFromSuperview];
+    }];
+}
+
+- (void)loadMore
+{
+    WS(_self)
+    [mKeyWindow addSubview : self.progressHUD];
+    [self.progressHUD show:YES];
+    [Singleton(KSRequest)requestDataWithParams:self.params Class:[self.data class] finished:^(id object) {
+        if ([object isKindOfClass:[NSArray class]]) {
+            [_tableView.tableItems addObjectsFromArray:object];
+            self.pageCount++;
+        }
+
+        [_self refresh];
+        [_self.progressHUD hide:YES];
+        [_self.progressHUD removeFromSuperview];
+    } failed:^(NSString *error) {
+        NSLog(@"网络问题");
+        [_self.progressHUD hide:YES];
+        [_self.progressHUD removeFromSuperview];
+    }];
+}
 
 #pragma mark - Model Data Update
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ * #pragma mark - Navigation
+ *
+ *   // In a storyboard-based application, you will often want to do a little preparation before navigation
+ *   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ *    // Get the new view controller using [segue destinationViewController].
+ *    // Pass the selected object to the new view controller.
+ *   }
+ */
 
 @end

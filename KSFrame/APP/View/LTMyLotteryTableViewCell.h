@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KSTableViewCell.h"
-@interface LTMyLotteryTableViewCell : KSTableViewCell
+@interface LTMyLotteryTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblLotteryType;
 @property (weak, nonatomic) IBOutlet UIImageView *stateImageView;
 @property (weak, nonatomic) IBOutlet UILabel *lblMoney;

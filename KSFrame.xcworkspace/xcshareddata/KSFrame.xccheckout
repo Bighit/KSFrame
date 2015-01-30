@@ -10,6 +10,8 @@
 	<string>KSFrame</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>1044D3046C0FE9196901898CCF74F4F89608B931</key>
+		<string>https://github.com/Bighit/KSFrame.git</string>
 		<key>59451D62461B2ECEF4255C5A265939FC6D9504BB</key>
 		<string>https://git.oschina.net/hantianyu/KSFrame.git</string>
 		<key>6166960986ECD02526315D2E511C48E303535457</key>
@@ -19,17 +21,19 @@
 	<string>KSFrame.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>1044D3046C0FE9196901898CCF74F4F89608B931</key>
+		<string>..</string>
 		<key>59451D62461B2ECEF4255C5A265939FC6D9504BB</key>
 		<string>../../KSFrame</string>
 		<key>6166960986ECD02526315D2E511C48E303535457</key>
-		<string>..</string>
+		<string>../../KSFrame%20git</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Bighit/KSFrame.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6166960986ECD02526315D2E511C48E303535457</string>
+	<string>1044D3046C0FE9196901898CCF74F4F89608B931</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -47,6 +51,14 @@
 			<string>6166960986ECD02526315D2E511C48E303535457</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KSFrame%20git</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1044D3046C0FE9196901898CCF74F4F89608B931</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KSFrame1</string>
 		</dict>
 	</array>
 </dict>

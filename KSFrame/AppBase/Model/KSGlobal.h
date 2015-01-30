@@ -25,5 +25,6 @@ typedef NS_ENUM (NSInteger, LotteryType) {
 };
 @interface KSGlobal : NSObject
 @property(nonatomic,assign)LotteryType currentLotteryType;
+
 CSingleton(KSGlobal)
 @end

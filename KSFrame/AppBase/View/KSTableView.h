@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSTableDataSource.h"
+#import "KSTableDelegate.h"
 @interface KSTableView : UITableView
-
+@property(nonatomic,strong)NSMutableArray *tableItems;
+@property(nonatomic,strong)KSTableDataSource *tableDataSource;
+@property(nonatomic,strong)KSTableDelegate *tableDelegate;
+- (void)initTableViewDataSource;
+- (void)initTableViewDelegate;
+-(NSString *)stringWithCellClassName;
 @end

@@ -8,12 +8,9 @@
 
 #import "KSRefreshViewController.h"
 #import "KSTableView.h"
-#import "KSTableDataSource.h"
-#import "KSTableDelegate.h"
-#import "KSTableViewCell.h"
 @interface KSTableViewController : KSRefreshViewController
 @property(nonatomic,strong)KSTableView *tableView;
-@property(nonatomic,strong)KSTableDataSource *tableDataSource;
-@property(nonatomic,strong)KSTableDelegate *tableDelegate;
-@property(nonatomic,strong)LoadMoreTableFooterView *tableFootView;
+@property(nonatomic,assign)NSUInteger pageCount;
+- (void)setTableViewDataSource;
+- (void)setTableViewDelegate;
 @end

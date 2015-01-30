@@ -20,26 +20,23 @@ PODS:
   - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - EGOTableViewPullRefreshAndLoadMore (1.0.4)
   - IQKeyboardManager (3.2.0.3)
   - Masonry (0.6.0)
   - MBProgressHUD (0.9)
-  - SSPullToRefresh (1.2.2)
+  - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.0)
-  - EGOTableViewPullRefreshAndLoadMore (~> 1.0.4)
   - IQKeyboardManager (~> 3.2.0.3)
   - Masonry (~> 0.6.0)
   - MBProgressHUD (~> 0.9)
-  - SSPullToRefresh
+  - SVPullToRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
-  EGOTableViewPullRefreshAndLoadMore: 1dcd0f78d7aa8dee28adf64891b627904be8cd71
   IQKeyboardManager: e0b33a5d821ab36ec47ce8ca9dc520030d6aac52
   Masonry: 0bc111d6902e3a55ff8423bcbdf7155261806547
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  SSPullToRefresh: da7acfb8e269acbd040be7f0b091824cda365a17
+  SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
 
 COCOAPODS: 0.35.0
