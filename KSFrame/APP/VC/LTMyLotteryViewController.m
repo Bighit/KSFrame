@@ -7,8 +7,8 @@
 //
 
 #import "LTMyLotteryViewController.h"
-#import "LTMyLotteryTableViewCell.h"
 #import "LTphoneRecord.h"
+#import "LTMyLotteryTableViewCell.h"
 @interface LTMyLotteryViewController ()
 
 @end
@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     self.data = [[LTphoneRecord alloc]init];
-    [self.params setDictionary:@{@"user":@"test_qiu", @"password":[@"123456" stringFromMD5], @"version":@"13", @"page":[NSString stringWithFormat:@"%lu",self.pageCount], @"result":@"全部"}];
+    [self.params setDictionary:[LTphoneRecord requestParams:self.pageCount]];
     // Do any additional setup after loading the view.
 }
 
@@ -33,13 +33,14 @@
 - (void)setTableViewDataSource
 {
     self.tableView.tableDataSource.cellClassName=NSStringFromClass([LTMyLotteryTableViewCell class]);
-    [self.tableView.tableDataSource setCellConfigureBlock :^UITableViewCell *(UITableViewCell *cell, id cellDatas, NSIndexPath *indexpath) {
+    [self.tableView registerNib:[UINib nibWithNibName:self.tableView.tableDataSource.cellClassName bundle:nil] forCellReuseIdentifier:self.tableView.tableDataSource.cellClassName];
+    [self.tableView.tableDataSource setCellConfigureBlock :^(UITableViewCell *cell, id cellDatas, NSIndexPath *indexpath) {
         LTMyLotteryTableViewCell *tableViewcell = (LTMyLotteryTableViewCell *)cell;
         LTphoneRecord *phoneRecord = (LTphoneRecord *)cellDatas;
-        [tableViewcell.lblLotteryType setText:phoneRecord.type];
+        [tableViewcell.lblType setText:phoneRecord.type];
         [tableViewcell.lblMoney setText:[NSString stringWithFormat:@"中奖金额：%@",phoneRecord.winMoney]];
         [tableViewcell.lblState setText:phoneRecord.status];
-        [tableViewcell.lblTime setText:[[NSDate dateWithTimeIntervalSince1970:[phoneRecord.time doubleValue]/1000] convertDateToStringWithFormat:@"yyyy-MM-dd hh:mm"]];
+        [tableViewcell.lblTime setText:[[NSDate dateWithTimeIntervalSince1970:[phoneRecord.time doubleValue]/1000] stringWithFormat:@"yyyy-MM-dd hh:mm"]];
         [tableViewcell.lblResult setText:phoneRecord.result];
         return tableViewcell;
     }];

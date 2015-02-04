@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4940AFF61A760A1A00A57CAC /* LTMyLotteryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940AFF41A760A1A00A57CAC /* LTMyLotteryTableViewCell.m */; };
-		4940AFF71A760A1A00A57CAC /* LTMyLotteryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4940AFF51A760A1A00A57CAC /* LTMyLotteryTableViewCell.xib */; };
+		493E96731A81CEDD00D41BE8 /* LTuserPayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 493E96721A81CEDD00D41BE8 /* LTuserPayList.m */; };
+		493E96781A81EABA00D41BE8 /* KSRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493E96751A81EABA00D41BE8 /* KSRefreshViewController.m */; };
+		493E96791A81EABA00D41BE8 /* KSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493E96771A81EABA00D41BE8 /* KSTableViewController.m */; };
+		493E967C1A81EB0800D41BE8 /* KSRespBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 493E967B1A81EB0800D41BE8 /* KSRespBase.m */; };
+		493E96851A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 493E96831A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.m */; };
+		493E96861A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493E96841A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.xib */; };
+		493E96921A81F11A00D41BE8 /* resetCash_cellBacground1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493E96901A81F11A00D41BE8 /* resetCash_cellBacground1@2x.png */; };
+		493E96931A81F11A00D41BE8 /* resetCash_cellBacground2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493E96911A81F11A00D41BE8 /* resetCash_cellBacground2@2x.png */; };
+		493E96961A81F50500D41BE8 /* LTMyMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493E96951A81F50500D41BE8 /* LTMyMoneyViewController.m */; };
 		4940AFFA1A76113300A57CAC /* LTMyLotteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940AFF91A76113300A57CAC /* LTMyLotteryViewController.m */; };
 		4940AFFF1A762D9F00A57CAC /* KSphoneUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940AFFC1A762D9F00A57CAC /* KSphoneUserInfo.m */; };
 		4940B0001A762D9F00A57CAC /* LTphoneRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940AFFE1A762D9F00A57CAC /* LTphoneRecord.m */; };
@@ -37,8 +44,6 @@
 		49B577101A7221F6002D8876 /* usercenter_MyMoney@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B576A51A7221F6002D8876 /* usercenter_MyMoney@2x.png */; };
 		49B577111A7221F6002D8876 /* usercenter_MyRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B576A61A7221F6002D8876 /* usercenter_MyRed@2x.png */; };
 		49B577121A7221F6002D8876 /* usercenter_Recharge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B576A71A7221F6002D8876 /* usercenter_Recharge@2x.png */; };
-		49B577131A7221F6002D8876 /* KSRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576AA1A7221F6002D8876 /* KSRefreshViewController.m */; };
-		49B577141A7221F6002D8876 /* KSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576AC1A7221F6002D8876 /* KSTableViewController.m */; };
 		49B577151A7221F6002D8876 /* KSUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576AE1A7221F6002D8876 /* KSUserCenterViewController.m */; };
 		49B577161A7221F6002D8876 /* KSUserCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576B11A7221F6002D8876 /* KSUserCenter.m */; };
 		49B577171A7221F6002D8876 /* KSUserCenter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B576B21A7221F6002D8876 /* KSUserCenter.xib */; };
@@ -51,12 +56,10 @@
 		49B5771E1A7221F6002D8876 /* KSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576C41A7221F6002D8876 /* KSTableViewCell.m */; };
 		49B5771F1A7221F6002D8876 /* KSFrame.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49B576C71A7221F6002D8876 /* KSFrame.strings */; };
 		49B577201A7221F6002D8876 /* NSData+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576CE1A7221F6002D8876 /* NSData+Addition.m */; };
-		49B577211A7221F6002D8876 /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576D01A7221F6002D8876 /* NSDate+Addition.m */; };
 		49B577221A7221F6002D8876 /* NSFileManager+ Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576D11A7221F6002D8876 /* NSFileManager+ Addition.m */; };
 		49B577231A7221F6002D8876 /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576D41A7221F6002D8876 /* NSString+Addition.m */; };
 		49B577241A7221F6002D8876 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576D61A7221F6002D8876 /* NSString+MD5Addition.m */; };
 		49B577251A7221F6002D8876 /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576D81A7221F6002D8876 /* NSString+Regular.m */; };
-		49B577261A7221F6002D8876 /* NVDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576DA1A7221F6002D8876 /* NVDate.m */; };
 		49B577271A7221F6002D8876 /* UIAlertView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576DC1A7221F6002D8876 /* UIAlertView+Addition.m */; };
 		49B577281A7221F6002D8876 /* UIButton+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576DE1A7221F6002D8876 /* UIButton+Addtion.m */; };
 		49B577291A7221F6002D8876 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576E01A7221F6002D8876 /* UIColor+Addition.m */; };
@@ -68,13 +71,28 @@
 		49B5772F1A7221F6002D8876 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576EC1A7221F6002D8876 /* UIView+Frame.m */; };
 		49B577301A7221F6002D8876 /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576EE1A7221F6002D8876 /* UIView+Layer.m */; };
 		49B577311A7221F6002D8876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B576EF1A7221F6002D8876 /* Images.xcassets */; };
-		49B577321A7221F6002D8876 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49B576F01A7221F6002D8876 /* Info.plist */; };
 		49B577331A7221F6002D8876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B576F11A7221F6002D8876 /* LaunchScreen.xib */; };
 		49B577341A7221F6002D8876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576F21A7221F6002D8876 /* main.m */; };
-		49B577351A7221F6002D8876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B576F31A7221F6002D8876 /* Main.storyboard */; };
 		49B577361A7221F6002D8876 /* KSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B576F71A7221F6002D8876 /* KSRequest.m */; };
 		49B577391A7222C6002D8876 /* KSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B577381A7222C6002D8876 /* KSNavigationController.m */; };
 		49C49AB51A398317004F0DE7 /* KSFrameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C49AB41A398317004F0DE7 /* KSFrameTests.m */; };
+		49E9D8AC1A80624C0023FD07 /* LTMyLotteryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E9D8AA1A80624C0023FD07 /* LTMyLotteryTableViewCell.m */; };
+		49E9D8AD1A80624C0023FD07 /* LTMyLotteryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E9D8AB1A80624C0023FD07 /* LTMyLotteryTableViewCell.xib */; };
+		49E9D8B11A8062D60023FD07 /* LTMyJoinedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E9D8AF1A8062D60023FD07 /* LTMyJoinedTableViewCell.m */; };
+		49E9D8B21A8062D60023FD07 /* LTMyJoinedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E9D8B01A8062D60023FD07 /* LTMyJoinedTableViewCell.xib */; };
+		49E9D8B51A80B14F0023FD07 /* LTuserTraceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E9D8B41A80B14F0023FD07 /* LTuserTraceList.m */; };
+		49E9D8B91A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E9D8B71A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.m */; };
+		49E9D8BA1A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E9D8B81A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.xib */; };
+		49E9D8BD1A80C00E0023FD07 /* LTMyCatchOnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E9D8BC1A80C00E0023FD07 /* LTMyCatchOnViewController.m */; };
+		49EB261D1A7F245D00C8472B /* LTMyRedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB261C1A7F245D00C8472B /* LTMyRedViewController.m */; };
+		49EB26201A7F281400C8472B /* LTMyJoinedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB261F1A7F281400C8472B /* LTMyJoinedViewController.m */; };
+		49EB26291A7F49B100C8472B /* Lottery_failed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49EB26251A7F49B100C8472B /* Lottery_failed@2x.png */; };
+		49EB262A1A7F49B100C8472B /* Lottery_miss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49EB26261A7F49B100C8472B /* Lottery_miss@2x.png */; };
+		49EB262B1A7F49B100C8472B /* Lottery_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49EB26271A7F49B100C8472B /* Lottery_success@2x.png */; };
+		49EB262C1A7F49B100C8472B /* Lottery_wait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49EB26281A7F49B100C8472B /* Lottery_wait@2x.png */; };
+		49EB26311A7F4E1F00C8472B /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB26301A7F4E1F00C8472B /* NSDate+Addition.m */; };
+		49EB26341A7F50FC00C8472B /* LTphoneMyHemai.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB26331A7F50FC00C8472B /* LTphoneMyHemai.m */; };
+		49EB26361A7F535900C8472B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EB26351A7F535900C8472B /* Security.framework */; };
 		99FA42637B2B27D4E366FF3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE905872262C3F07990DBB4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,9 +108,21 @@
 
 /* Begin PBXFileReference section */
 		07964DF2EB9C7596238725D7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		4940AFF31A760A1A00A57CAC /* LTMyLotteryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyLotteryTableViewCell.h; sourceTree = "<group>"; };
-		4940AFF41A760A1A00A57CAC /* LTMyLotteryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyLotteryTableViewCell.m; sourceTree = "<group>"; };
-		4940AFF51A760A1A00A57CAC /* LTMyLotteryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTMyLotteryTableViewCell.xib; sourceTree = "<group>"; };
+		493E96711A81CEDD00D41BE8 /* LTuserPayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTuserPayList.h; sourceTree = "<group>"; };
+		493E96721A81CEDD00D41BE8 /* LTuserPayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTuserPayList.m; sourceTree = "<group>"; };
+		493E96741A81EABA00D41BE8 /* KSRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRefreshViewController.h; sourceTree = "<group>"; };
+		493E96751A81EABA00D41BE8 /* KSRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRefreshViewController.m; sourceTree = "<group>"; };
+		493E96761A81EABA00D41BE8 /* KSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTableViewController.h; sourceTree = "<group>"; };
+		493E96771A81EABA00D41BE8 /* KSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTableViewController.m; sourceTree = "<group>"; };
+		493E967A1A81EB0800D41BE8 /* KSRespBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRespBase.h; sourceTree = "<group>"; };
+		493E967B1A81EB0800D41BE8 /* KSRespBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRespBase.m; sourceTree = "<group>"; };
+		493E96821A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyMoneyTableViewCell.h; sourceTree = "<group>"; };
+		493E96831A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyMoneyTableViewCell.m; sourceTree = "<group>"; };
+		493E96841A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTMyMoneyTableViewCell.xib; sourceTree = "<group>"; };
+		493E96901A81F11A00D41BE8 /* resetCash_cellBacground1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "resetCash_cellBacground1@2x.png"; path = "KSFrame/APP/Resource/MyMoney/resetCash_cellBacground1@2x.png"; sourceTree = SOURCE_ROOT; };
+		493E96911A81F11A00D41BE8 /* resetCash_cellBacground2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "resetCash_cellBacground2@2x.png"; path = "KSFrame/APP/Resource/MyMoney/resetCash_cellBacground2@2x.png"; sourceTree = SOURCE_ROOT; };
+		493E96941A81F50500D41BE8 /* LTMyMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyMoneyViewController.h; sourceTree = "<group>"; };
+		493E96951A81F50500D41BE8 /* LTMyMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyMoneyViewController.m; sourceTree = "<group>"; };
 		4940AFF81A76113300A57CAC /* LTMyLotteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyLotteryViewController.h; sourceTree = "<group>"; };
 		4940AFF91A76113300A57CAC /* LTMyLotteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyLotteryViewController.m; sourceTree = "<group>"; };
 		4940AFFB1A762D9F00A57CAC /* KSphoneUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSphoneUserInfo.h; sourceTree = "<group>"; };
@@ -128,10 +158,6 @@
 		49B576A51A7221F6002D8876 /* usercenter_MyMoney@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usercenter_MyMoney@2x.png"; sourceTree = "<group>"; };
 		49B576A61A7221F6002D8876 /* usercenter_MyRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usercenter_MyRed@2x.png"; sourceTree = "<group>"; };
 		49B576A71A7221F6002D8876 /* usercenter_Recharge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usercenter_Recharge@2x.png"; sourceTree = "<group>"; };
-		49B576A91A7221F6002D8876 /* KSRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRefreshViewController.h; sourceTree = "<group>"; };
-		49B576AA1A7221F6002D8876 /* KSRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRefreshViewController.m; sourceTree = "<group>"; };
-		49B576AB1A7221F6002D8876 /* KSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTableViewController.h; sourceTree = "<group>"; };
-		49B576AC1A7221F6002D8876 /* KSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTableViewController.m; sourceTree = "<group>"; };
 		49B576AD1A7221F6002D8876 /* KSUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserCenterViewController.h; sourceTree = "<group>"; };
 		49B576AE1A7221F6002D8876 /* KSUserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserCenterViewController.m; sourceTree = "<group>"; };
 		49B576B01A7221F6002D8876 /* KSUserCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserCenter.h; sourceTree = "<group>"; };
@@ -158,8 +184,6 @@
 		49B576CA1A7221F6002D8876 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		49B576CD1A7221F6002D8876 /* NSData+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Addition.h"; sourceTree = "<group>"; };
 		49B576CE1A7221F6002D8876 /* NSData+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Addition.m"; sourceTree = "<group>"; };
-		49B576CF1A7221F6002D8876 /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
-		49B576D01A7221F6002D8876 /* NSDate+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
 		49B576D11A7221F6002D8876 /* NSFileManager+ Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+ Addition.m"; sourceTree = "<group>"; };
 		49B576D21A7221F6002D8876 /* NSFileManager+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Addition.h"; sourceTree = "<group>"; };
 		49B576D31A7221F6002D8876 /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
@@ -168,8 +192,6 @@
 		49B576D61A7221F6002D8876 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		49B576D71A7221F6002D8876 /* NSString+Regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
 		49B576D81A7221F6002D8876 /* NSString+Regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regular.m"; sourceTree = "<group>"; };
-		49B576D91A7221F6002D8876 /* NVDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVDate.h; sourceTree = "<group>"; };
-		49B576DA1A7221F6002D8876 /* NVDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVDate.m; sourceTree = "<group>"; };
 		49B576DB1A7221F6002D8876 /* UIAlertView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Addition.h"; sourceTree = "<group>"; };
 		49B576DC1A7221F6002D8876 /* UIAlertView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Addition.m"; sourceTree = "<group>"; };
 		49B576DD1A7221F6002D8876 /* UIButton+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addtion.h"; sourceTree = "<group>"; };
@@ -194,7 +216,6 @@
 		49B576F01A7221F6002D8876 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49B576F11A7221F6002D8876 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		49B576F21A7221F6002D8876 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49B576F31A7221F6002D8876 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49B576F41A7221F6002D8876 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		49B576F61A7221F6002D8876 /* KSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRequest.h; sourceTree = "<group>"; };
 		49B576F71A7221F6002D8876 /* KSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRequest.m; sourceTree = "<group>"; };
@@ -205,6 +226,32 @@
 		49C49AB31A398317004F0DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49C49AB41A398317004F0DE7 /* KSFrameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSFrameTests.m; sourceTree = "<group>"; };
 		49C9FBF01A78908E006E7293 /* APPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHeader.h; sourceTree = "<group>"; };
+		49E9D8A91A80624C0023FD07 /* LTMyLotteryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyLotteryTableViewCell.h; sourceTree = "<group>"; };
+		49E9D8AA1A80624C0023FD07 /* LTMyLotteryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyLotteryTableViewCell.m; sourceTree = "<group>"; };
+		49E9D8AB1A80624C0023FD07 /* LTMyLotteryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTMyLotteryTableViewCell.xib; sourceTree = "<group>"; };
+		49E9D8AE1A8062D60023FD07 /* LTMyJoinedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyJoinedTableViewCell.h; sourceTree = "<group>"; };
+		49E9D8AF1A8062D60023FD07 /* LTMyJoinedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyJoinedTableViewCell.m; sourceTree = "<group>"; };
+		49E9D8B01A8062D60023FD07 /* LTMyJoinedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTMyJoinedTableViewCell.xib; sourceTree = "<group>"; };
+		49E9D8B31A80B14F0023FD07 /* LTuserTraceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTuserTraceList.h; sourceTree = "<group>"; };
+		49E9D8B41A80B14F0023FD07 /* LTuserTraceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTuserTraceList.m; sourceTree = "<group>"; };
+		49E9D8B61A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyCatchOnTableViewCell.h; sourceTree = "<group>"; };
+		49E9D8B71A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyCatchOnTableViewCell.m; sourceTree = "<group>"; };
+		49E9D8B81A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTMyCatchOnTableViewCell.xib; sourceTree = "<group>"; };
+		49E9D8BB1A80C00E0023FD07 /* LTMyCatchOnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyCatchOnViewController.h; sourceTree = "<group>"; };
+		49E9D8BC1A80C00E0023FD07 /* LTMyCatchOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyCatchOnViewController.m; sourceTree = "<group>"; };
+		49EB261B1A7F245D00C8472B /* LTMyRedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyRedViewController.h; sourceTree = "<group>"; };
+		49EB261C1A7F245D00C8472B /* LTMyRedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyRedViewController.m; sourceTree = "<group>"; };
+		49EB261E1A7F281400C8472B /* LTMyJoinedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMyJoinedViewController.h; sourceTree = "<group>"; };
+		49EB261F1A7F281400C8472B /* LTMyJoinedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMyJoinedViewController.m; sourceTree = "<group>"; };
+		49EB26251A7F49B100C8472B /* Lottery_failed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lottery_failed@2x.png"; sourceTree = "<group>"; };
+		49EB26261A7F49B100C8472B /* Lottery_miss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lottery_miss@2x.png"; sourceTree = "<group>"; };
+		49EB26271A7F49B100C8472B /* Lottery_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lottery_success@2x.png"; sourceTree = "<group>"; };
+		49EB26281A7F49B100C8472B /* Lottery_wait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lottery_wait@2x.png"; sourceTree = "<group>"; };
+		49EB262F1A7F4E1F00C8472B /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
+		49EB26301A7F4E1F00C8472B /* NSDate+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
+		49EB26321A7F50FC00C8472B /* LTphoneMyHemai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTphoneMyHemai.h; sourceTree = "<group>"; };
+		49EB26331A7F50FC00C8472B /* LTphoneMyHemai.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTphoneMyHemai.m; sourceTree = "<group>"; };
+		49EB26351A7F535900C8472B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5CE905872262C3F07990DBB4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9A098486C14A3FAEEDABCA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49EB26361A7F535900C8472B /* Security.framework in Frameworks */,
 				99FA42637B2B27D4E366FF3B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +276,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		493E96871A81F09400D41BE8 /* MyMoney */ = {
+			isa = PBXGroup;
+			children = (
+				493E96901A81F11A00D41BE8 /* resetCash_cellBacground1@2x.png */,
+				493E96911A81F11A00D41BE8 /* resetCash_cellBacground2@2x.png */,
+			);
+			name = MyMoney;
+			path = MyJoined;
+			sourceTree = "<group>";
+		};
 		49B576821A7221F6002D8876 /* KSFrame */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +297,6 @@
 				49B576F01A7221F6002D8876 /* Info.plist */,
 				49B576F11A7221F6002D8876 /* LaunchScreen.xib */,
 				49B576F21A7221F6002D8876 /* main.m */,
-				49B576F31A7221F6002D8876 /* Main.storyboard */,
 				49B576F41A7221F6002D8876 /* PrefixHeader.pch */,
 				49B576F51A7221F6002D8876 /* Request */,
 			);
@@ -249,10 +306,10 @@
 		49B576831A7221F6002D8876 /* APP */ = {
 			isa = PBXGroup;
 			children = (
-				49B576861A7221F6002D8876 /* Model */,
 				49B576921A7221F6002D8876 /* Resource */,
-				49B576A81A7221F6002D8876 /* VC */,
+				49B576861A7221F6002D8876 /* Model */,
 				49B576AF1A7221F6002D8876 /* View */,
+				49B576A81A7221F6002D8876 /* VC */,
 			);
 			path = APP;
 			sourceTree = "<group>";
@@ -280,6 +337,12 @@
 				4940AFFE1A762D9F00A57CAC /* LTphoneRecord.m */,
 				49B576901A7221F6002D8876 /* KSphoneLogin.h */,
 				49B576911A7221F6002D8876 /* KSphoneLogin.m */,
+				49EB26321A7F50FC00C8472B /* LTphoneMyHemai.h */,
+				49EB26331A7F50FC00C8472B /* LTphoneMyHemai.m */,
+				49E9D8B31A80B14F0023FD07 /* LTuserTraceList.h */,
+				49E9D8B41A80B14F0023FD07 /* LTuserTraceList.m */,
+				493E96711A81CEDD00D41BE8 /* LTuserPayList.h */,
+				493E96721A81CEDD00D41BE8 /* LTuserPayList.m */,
 			);
 			path = Resp;
 			sourceTree = "<group>";
@@ -287,6 +350,8 @@
 		49B576921A7221F6002D8876 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				493E96871A81F09400D41BE8 /* MyMoney */,
+				49EB26241A7F49B100C8472B /* MyJoined */,
 				49B576931A7221F6002D8876 /* accessorArrow@2x.png */,
 				49B576941A7221F6002D8876 /* headImage@2x.png */,
 				49B576951A7221F6002D8876 /* setting_actionbtn@2x.png */,
@@ -315,14 +380,18 @@
 		49B576A81A7221F6002D8876 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				49B576A91A7221F6002D8876 /* KSRefreshViewController.h */,
-				49B576AA1A7221F6002D8876 /* KSRefreshViewController.m */,
-				49B576AB1A7221F6002D8876 /* KSTableViewController.h */,
-				49B576AC1A7221F6002D8876 /* KSTableViewController.m */,
 				49B576AD1A7221F6002D8876 /* KSUserCenterViewController.h */,
 				49B576AE1A7221F6002D8876 /* KSUserCenterViewController.m */,
 				4940AFF81A76113300A57CAC /* LTMyLotteryViewController.h */,
 				4940AFF91A76113300A57CAC /* LTMyLotteryViewController.m */,
+				49EB261B1A7F245D00C8472B /* LTMyRedViewController.h */,
+				49EB261C1A7F245D00C8472B /* LTMyRedViewController.m */,
+				49EB261E1A7F281400C8472B /* LTMyJoinedViewController.h */,
+				49EB261F1A7F281400C8472B /* LTMyJoinedViewController.m */,
+				49E9D8BB1A80C00E0023FD07 /* LTMyCatchOnViewController.h */,
+				49E9D8BC1A80C00E0023FD07 /* LTMyCatchOnViewController.m */,
+				493E96941A81F50500D41BE8 /* LTMyMoneyViewController.h */,
+				493E96951A81F50500D41BE8 /* LTMyMoneyViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -333,9 +402,18 @@
 				49B576B01A7221F6002D8876 /* KSUserCenter.h */,
 				49B576B11A7221F6002D8876 /* KSUserCenter.m */,
 				49B576B21A7221F6002D8876 /* KSUserCenter.xib */,
-				4940AFF31A760A1A00A57CAC /* LTMyLotteryTableViewCell.h */,
-				4940AFF41A760A1A00A57CAC /* LTMyLotteryTableViewCell.m */,
-				4940AFF51A760A1A00A57CAC /* LTMyLotteryTableViewCell.xib */,
+				49E9D8A91A80624C0023FD07 /* LTMyLotteryTableViewCell.h */,
+				49E9D8AA1A80624C0023FD07 /* LTMyLotteryTableViewCell.m */,
+				49E9D8AB1A80624C0023FD07 /* LTMyLotteryTableViewCell.xib */,
+				49E9D8AE1A8062D60023FD07 /* LTMyJoinedTableViewCell.h */,
+				49E9D8AF1A8062D60023FD07 /* LTMyJoinedTableViewCell.m */,
+				49E9D8B01A8062D60023FD07 /* LTMyJoinedTableViewCell.xib */,
+				49E9D8B61A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.h */,
+				49E9D8B71A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.m */,
+				49E9D8B81A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.xib */,
+				493E96821A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.h */,
+				493E96831A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.m */,
+				493E96841A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +433,8 @@
 		49B576B61A7221F6002D8876 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				493E967A1A81EB0800D41BE8 /* KSRespBase.h */,
+				493E967B1A81EB0800D41BE8 /* KSRespBase.m */,
 				49B576B71A7221F6002D8876 /* KSGlobal.h */,
 				49B576B81A7221F6002D8876 /* KSGlobal.m */,
 				49B576B91A7221F6002D8876 /* KSTableDataSource.h */,
@@ -368,6 +448,10 @@
 		49B576BD1A7221F6002D8876 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				493E96741A81EABA00D41BE8 /* KSRefreshViewController.h */,
+				493E96751A81EABA00D41BE8 /* KSRefreshViewController.m */,
+				493E96761A81EABA00D41BE8 /* KSTableViewController.h */,
+				493E96771A81EABA00D41BE8 /* KSTableViewController.m */,
 				49B577371A7222C6002D8876 /* KSNavigationController.h */,
 				49B577381A7222C6002D8876 /* KSNavigationController.m */,
 				49B576BE1A7221F6002D8876 /* KSViewController.h */,
@@ -405,8 +489,8 @@
 			children = (
 				49B576CD1A7221F6002D8876 /* NSData+Addition.h */,
 				49B576CE1A7221F6002D8876 /* NSData+Addition.m */,
-				49B576CF1A7221F6002D8876 /* NSDate+Addition.h */,
-				49B576D01A7221F6002D8876 /* NSDate+Addition.m */,
+				49EB262F1A7F4E1F00C8472B /* NSDate+Addition.h */,
+				49EB26301A7F4E1F00C8472B /* NSDate+Addition.m */,
 				49B576D11A7221F6002D8876 /* NSFileManager+ Addition.m */,
 				49B576D21A7221F6002D8876 /* NSFileManager+Addition.h */,
 				49B576D31A7221F6002D8876 /* NSString+Addition.h */,
@@ -415,8 +499,6 @@
 				49B576D61A7221F6002D8876 /* NSString+MD5Addition.m */,
 				49B576D71A7221F6002D8876 /* NSString+Regular.h */,
 				49B576D81A7221F6002D8876 /* NSString+Regular.m */,
-				49B576D91A7221F6002D8876 /* NVDate.h */,
-				49B576DA1A7221F6002D8876 /* NVDate.m */,
 				49B576DB1A7221F6002D8876 /* UIAlertView+Addition.h */,
 				49B576DC1A7221F6002D8876 /* UIAlertView+Addition.m */,
 				49B576DD1A7221F6002D8876 /* UIButton+Addtion.h */,
@@ -487,9 +569,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		49EB26241A7F49B100C8472B /* MyJoined */ = {
+			isa = PBXGroup;
+			children = (
+				49EB26251A7F49B100C8472B /* Lottery_failed@2x.png */,
+				49EB26261A7F49B100C8472B /* Lottery_miss@2x.png */,
+				49EB26271A7F49B100C8472B /* Lottery_success@2x.png */,
+				49EB26281A7F49B100C8472B /* Lottery_wait@2x.png */,
+			);
+			path = MyJoined;
+			sourceTree = "<group>";
+		};
 		898C1E0A282903172EEC3A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49EB26351A7F535900C8472B /* Security.framework */,
 				5CE905872262C3F07990DBB4 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -550,7 +644,7 @@
 		49C49A8D1A398317004F0DE7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = HTY;
 				TargetAttributes = {
 					49C49A941A398317004F0DE7 = {
@@ -586,13 +680,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493E96931A81F11A00D41BE8 /* resetCash_cellBacground2@2x.png in Resources */,
+				49E9D8B21A8062D60023FD07 /* LTMyJoinedTableViewCell.xib in Resources */,
+				49EB262B1A7F49B100C8472B /* Lottery_success@2x.png in Resources */,
 				49B577001A7221F6002D8876 /* setting_actionbtn@2x.png in Resources */,
+				49EB26291A7F49B100C8472B /* Lottery_failed@2x.png in Resources */,
 				49B577091A7221F6002D8876 /* setting_shouji@2x.png in Resources */,
 				49B577011A7221F6002D8876 /* setting_actionbtn_h@2x.png in Resources */,
 				49B576FF1A7221F6002D8876 /* headImage@2x.png in Resources */,
 				49B5770D1A7221F6002D8876 /* setting_zaixian@2x.png in Resources */,
+				49E9D8BA1A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.xib in Resources */,
 				49B576FE1A7221F6002D8876 /* accessorArrow@2x.png in Resources */,
-				49B577351A7221F6002D8876 /* Main.storyboard in Resources */,
+				49E9D8AD1A80624C0023FD07 /* LTMyLotteryTableViewCell.xib in Resources */,
 				49B577021A7221F6002D8876 /* setting_ButtonBack@2x.png in Resources */,
 				49B577101A7221F6002D8876 /* usercenter_MyMoney@2x.png in Resources */,
 				49B577111A7221F6002D8876 /* usercenter_MyRed@2x.png in Resources */,
@@ -601,18 +700,20 @@
 				49B577041A7221F6002D8876 /* setting_CellBack@2x.png in Resources */,
 				49B5770A1A7221F6002D8876 /* setting_tixian@2x.png in Resources */,
 				49B577061A7221F6002D8876 /* setting_kefu@2x.png in Resources */,
+				493E96921A81F11A00D41BE8 /* resetCash_cellBacground1@2x.png in Resources */,
 				49B5771F1A7221F6002D8876 /* KSFrame.strings in Resources */,
 				49B577071A7221F6002D8876 /* setting_login@2x.png in Resources */,
-				4940AFF71A760A1A00A57CAC /* LTMyLotteryTableViewCell.xib in Resources */,
 				49B577081A7221F6002D8876 /* setting_shiming@2x.png in Resources */,
 				49B577051A7221F6002D8876 /* setting_feedback@2x.png in Resources */,
 				49B5770B1A7221F6002D8876 /* setting_xiugai@2x.png in Resources */,
+				49EB262C1A7F49B100C8472B /* Lottery_wait@2x.png in Resources */,
 				49B577171A7221F6002D8876 /* KSUserCenter.xib in Resources */,
 				49B577031A7221F6002D8876 /* setting_CellBack1.png in Resources */,
 				49B577121A7221F6002D8876 /* usercenter_Recharge@2x.png in Resources */,
 				49B577331A7221F6002D8876 /* LaunchScreen.xib in Resources */,
+				49EB262A1A7F49B100C8472B /* Lottery_miss@2x.png in Resources */,
 				49B5770F1A7221F6002D8876 /* usercenter_MyLottery@2x.png in Resources */,
-				49B577321A7221F6002D8876 /* Info.plist in Resources */,
+				493E96861A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.xib in Resources */,
 				49B5770C1A7221F6002D8876 /* setting_yinhangka@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,45 +765,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493E96781A81EABA00D41BE8 /* KSRefreshViewController.m in Sources */,
+				493E96961A81F50500D41BE8 /* LTMyMoneyViewController.m in Sources */,
 				49B577191A7221F6002D8876 /* KSGlobal.m in Sources */,
 				49B577181A7221F6002D8876 /* AppDelegate.m in Sources */,
 				4940B0001A762D9F00A57CAC /* LTphoneRecord.m in Sources */,
 				49B5771A1A7221F6002D8876 /* KSTableDataSource.m in Sources */,
 				49B5771E1A7221F6002D8876 /* KSTableViewCell.m in Sources */,
-				49B577211A7221F6002D8876 /* NSDate+Addition.m in Sources */,
 				49B577341A7221F6002D8876 /* main.m in Sources */,
 				49B5772D1A7221F6002D8876 /* UITextField+LimitLength.m in Sources */,
 				49B5772A1A7221F6002D8876 /* UIImage+Addition.m in Sources */,
 				4940AFFA1A76113300A57CAC /* LTMyLotteryViewController.m in Sources */,
-				49B577261A7221F6002D8876 /* NVDate.m in Sources */,
+				493E967C1A81EB0800D41BE8 /* KSRespBase.m in Sources */,
+				49EB26311A7F4E1F00C8472B /* NSDate+Addition.m in Sources */,
+				49EB26201A7F281400C8472B /* LTMyJoinedViewController.m in Sources */,
 				49B577391A7222C6002D8876 /* KSNavigationController.m in Sources */,
 				49B577201A7221F6002D8876 /* NSData+Addition.m in Sources */,
 				49B5772C1A7221F6002D8876 /* UILabel+Addtion.m in Sources */,
 				49B576FD1A7221F6002D8876 /* KSphoneLogin.m in Sources */,
+				49E9D8AC1A80624C0023FD07 /* LTMyLotteryTableViewCell.m in Sources */,
+				49E9D8B91A80BDDE0023FD07 /* LTMyCatchOnTableViewCell.m in Sources */,
+				49E9D8BD1A80C00E0023FD07 /* LTMyCatchOnViewController.m in Sources */,
 				49B577221A7221F6002D8876 /* NSFileManager+ Addition.m in Sources */,
 				49B577161A7221F6002D8876 /* KSUserCenter.m in Sources */,
 				49B576FA1A7221F6002D8876 /* KSLogic.m in Sources */,
 				49B577241A7221F6002D8876 /* NSString+MD5Addition.m in Sources */,
+				49EB26341A7F50FC00C8472B /* LTphoneMyHemai.m in Sources */,
 				49B5772E1A7221F6002D8876 /* UIView+Animation.m in Sources */,
-				49B577131A7221F6002D8876 /* KSRefreshViewController.m in Sources */,
 				49B5771D1A7221F6002D8876 /* KSTableView.m in Sources */,
-				4940AFF61A760A1A00A57CAC /* LTMyLotteryTableViewCell.m in Sources */,
 				49B5771C1A7221F6002D8876 /* KSViewController.m in Sources */,
 				49B5772F1A7221F6002D8876 /* UIView+Frame.m in Sources */,
 				49B5771B1A7221F6002D8876 /* KSTableDelegate.m in Sources */,
+				49EB261D1A7F245D00C8472B /* LTMyRedViewController.m in Sources */,
 				4940AFFF1A762D9F00A57CAC /* KSphoneUserInfo.m in Sources */,
+				493E96791A81EABA00D41BE8 /* KSTableViewController.m in Sources */,
+				49E9D8B51A80B14F0023FD07 /* LTuserTraceList.m in Sources */,
 				49B577291A7221F6002D8876 /* UIColor+Addition.m in Sources */,
 				49B577231A7221F6002D8876 /* NSString+Addition.m in Sources */,
+				493E96851A81ECFA00D41BE8 /* LTMyMoneyTableViewCell.m in Sources */,
+				49E9D8B11A8062D60023FD07 /* LTMyJoinedTableViewCell.m in Sources */,
 				49B577271A7221F6002D8876 /* UIAlertView+Addition.m in Sources */,
 				49B577151A7221F6002D8876 /* KSUserCenterViewController.m in Sources */,
 				49B577251A7221F6002D8876 /* NSString+Regular.m in Sources */,
 				49B577301A7221F6002D8876 /* UIView+Layer.m in Sources */,
 				49B576F91A7221F6002D8876 /* KSCommand.m in Sources */,
 				49B577281A7221F6002D8876 /* UIButton+Addtion.m in Sources */,
+				493E96731A81CEDD00D41BE8 /* LTuserPayList.m in Sources */,
 				49B576FB1A7221F6002D8876 /* KSModel.m in Sources */,
 				49B577361A7221F6002D8876 /* KSRequest.m in Sources */,
 				49B5772B1A7221F6002D8876 /* UIImageView+LBBlurredImage.m in Sources */,
-				49B577141A7221F6002D8876 /* KSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

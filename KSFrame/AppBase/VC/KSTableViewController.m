@@ -22,10 +22,10 @@
     [_tableView setBackgroundColor:[UIColor whiteColor]];
     //上拉加载 下拉刷新
     WS(_self)
-    
+
     [_tableView addPullToRefreshWithActionHandler :^{
         [_self performSelector:@selector(loadMore) withObject:nil afterDelay:0.2];
-    }position:SVPullToRefreshPositionBottom];
+    } position : SVPullToRefreshPositionBottom];
 }
 
 - (void)viewDidLoad
@@ -34,7 +34,6 @@
     self.pageCount = 1;
     [self setTableViewDataSource];
     [self setTableViewDelegate];
-    [_tableView registerNib:[UINib nibWithNibName:_tableView.tableDataSource.cellClassName bundle:nil] forCellReuseIdentifier:_tableView.tableDataSource.cellClassName];
     // Do any additional setup after loading the view.
 }
 
@@ -42,7 +41,6 @@
 {
     [super viewDidAppear:animated];
     [self pullToRefresh];
-   
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,9 +71,9 @@
 - (void)refresh
 {
     [super refresh];
-    [self.params setObject:[NSString stringWithFormat:@"%lu",self.pageCount] forKey:@"page"];
+    [self.params setDictionary:[[self.data class] requestParams:self.pageCount]];
     [self.tableView reloadData];
-    NSLog(@"数据总数：%lu，页码：%lu", [_tableView.tableItems count], _pageCount-1);
+    NSLog(@"数据总数：%lu，页码：%lu", [_tableView.tableItems count], _pageCount - 1);
 }
 
 - (void)pullToRefresh
@@ -84,13 +82,7 @@
     [mKeyWindow addSubview : self.progressHUD];
     [self.progressHUD show:YES];
     [Singleton(KSRequest)requestDataWithParams:self.params Class:[self.data class] finished:^(id object) {
-        if ([object isKindOfClass:[NSArray class]]) {
-            [_tableView.tableItems setArray:object];
-            self.pageCount++;
-        } else {
-            _self.data = object;
-        }
-
+        [_tableView.tableItems setArray:[_self analyseTableData:object]];
         [_self refresh];
         [_self.progressHUD hide:YES];
         [_self.progressHUD removeFromSuperview];
@@ -101,16 +93,31 @@
     }];
 }
 
+- (NSArray *)analyseTableData:(id)object
+{
+    if ([object isKindOfClass:[NSArray class]]) {
+        self.pageCount++;
+        return object;
+    } else if ([object isKindOfClass:[KSRespBase class]]) {
+        self.data = object;
+
+        if (self.data.message) {
+            mAlertView(@"提示", self.data.message);
+        }
+
+        return nil;
+    } else {
+        return nil;
+    }
+}
+
 - (void)loadMore
 {
     WS(_self)
     [mKeyWindow addSubview : self.progressHUD];
     [self.progressHUD show:YES];
     [Singleton(KSRequest)requestDataWithParams:self.params Class:[self.data class] finished:^(id object) {
-        if ([object isKindOfClass:[NSArray class]]) {
-            [_tableView.tableItems addObjectsFromArray:object];
-            self.pageCount++;
-        }
+        [_tableView.tableItems addObjectsFromArray:[_self analyseTableData:object]];
 
         [_self refresh];
         [_self.progressHUD hide:YES];

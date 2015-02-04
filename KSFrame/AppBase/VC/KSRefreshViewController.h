@@ -7,11 +7,13 @@
 //
 
 #import "KSViewController.h"
-
-@interface KSRefreshViewController : KSViewController
-@property(nonatomic,strong)MBProgressHUD *progressHUD;
-@property(nonatomic,strong)id data;//数据
-@property(nonatomic,strong)NSMutableDictionary* params;//参数
+@protocol KSRefreshViewControllerDelegate
 - (void)refresh;
+@end
+@interface KSRefreshViewController : KSViewController<KSRefreshViewControllerDelegate>
+@property(nonatomic,strong)MBProgressHUD *progressHUD;
+@property(nonatomic,strong)KSRespBase *data;//网路数据
+@property(nonatomic,strong)NSMutableDictionary* params;//参数
 -(void)setViewContentSize:(CGSize)size;
 @end
+

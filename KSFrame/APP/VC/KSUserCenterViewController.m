@@ -7,8 +7,11 @@
 //
 
 #import "KSUserCenterViewController.h"
-#import "KSphoneLogin.h"
 #import "LTMyLotteryViewController.h"
+#import "LTMyJoinedViewController.h"
+#import "LTMyCatchOnViewController.h"
+#import "LTMyMoneyViewController.h"
+#import "KSphoneLogin.h"
 @implementation KSUserCenterViewController
 
 - (void)viewDidLoad
@@ -18,7 +21,7 @@
     self.cellIentifier = @"userCenterTableViewCell";
     self.tableItems = [NSMutableArray arrayWithArray:@[@[@[@"实名认证", @"setting_shiming"], @[@"手机绑定", @"setting_shouji"], @[@"银行卡绑定", @"setting_yinhangka"], @[@"提现", @"setting_tixian"], @[@"修改密码", @"setting_xiugai"]], @[@[@"在线客服", @"setting_zaixian"], @[@"客服电话", @"setting_kefu"]]]];
     self.data = [[KSphoneLogin alloc]init];
-    [self.params setDictionary:@{@"user":@"test_qiu", @"password":[@"123456" stringFromMD5], @"version":@"13"}] ;
+    [self.params setDictionary:[KSphoneUserInfo requestParams]];
     //
     self.viewWithXib = [KSUserCenter viewWithNib];
     [self.view addSubview:_viewWithXib];
@@ -36,13 +39,16 @@
     [_viewWithXib.userTableView setTableItems:self.tableItems];
     //
     [_viewWithXib.btnMyLottery addTarget:self action:@selector(btnLotteryClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_viewWithXib.btnMyMoney addTarget:self action:@selector(btnLotteryClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_viewWithXib.btnMyRed addTarget:self action:@selector(btnLotteryClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_viewWithXib.btnRecharge addTarget:self action:@selector(btnLotteryClicked:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - refresh pulldown
 - (void)refresh
 {
     [super refresh];
-    KSphoneLogin *login = self.data;
+    KSphoneLogin *login = (KSphoneLogin *)self.data;
 
     if (kRespVilid(login.status)) {
         [_viewWithXib.lblName setText:@"test_qiu"];
@@ -114,9 +120,19 @@
 #pragma mark - buttonclick
 - (void)btnLotteryClicked:(UIButton *)sender
 {
-    LTMyLotteryViewController *viewController = [[LTMyLotteryViewController alloc]init];
-
-    [self.navigationController pushViewController:viewController animated:YES];
+    if ([sender isEqual:_viewWithXib.btnMyLottery]) {
+        LTMyLotteryViewController *viewController = [[LTMyLotteryViewController alloc]init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }else if ([sender isEqual:_viewWithXib.btnMyMoney])
+    {
+        LTMyJoinedViewController *viewController = [[LTMyJoinedViewController alloc]init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }else if ([sender isEqual:_viewWithXib.btnMyRed])
+    {
+        LTMyMoneyViewController *viewController = [[LTMyMoneyViewController alloc]init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
 }
 
 @end

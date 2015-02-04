@@ -8,8 +8,6 @@
 
 #import "KSRefreshViewController.h"
 #import "KSUserCenter.h"
-#import "KSTableDataSource.h"
-#import "KSTableDelegate.h"
 #import "KSphoneUserInfo.h"
 @interface KSUserCenterViewController :KSRefreshViewController
 @property(nonatomic,strong)NSString *cellIentifier;

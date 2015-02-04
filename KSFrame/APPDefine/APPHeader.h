@@ -9,11 +9,19 @@
 #ifndef KSFrame_APPHeader_h
 #define KSFrame_APPHeader_h
 
-#import "KSGlobal.h"
-//************Category**********
+
+
+//********* Third Control **********
+#import <AFNetworking.h>
+#import <MBProgressHUD.h>
+#import <IQKeyboardManager.h>
+#import <SVPullToRefresh.h>
+#import <Masonry.h>
+
+//************ Category **********
 #import "NSData+Addition.h"
-#import "NSFileManager+Addition.h"
 #import "NSDate+Addition.h"
+#import "NSFileManager+Addition.h"
 #import "NSString+Addition.h"
 #import "NSString+MD5Addition.h"
 #import "NSString+Regular.h"
@@ -27,11 +35,11 @@
 #import "UIView+Layer.h"
 #import "UIButton+Addtion.h"
 #import "UILabel+Addtion.h"
-#import "NVDate.h"
-//*********Third Control**********
-#import <AFNetworking.h>
-#import <MBProgressHUD.h>
-#import <IQKeyboardManager.h>
-#import <SVPullToRefresh.h>
-#import <Masonry.h>
+
+//************ BaseClass *********
+#import "KSGlobal.h"
+#import "KSRespBase.h"
+#import "KSTableViewController.h"
+#import "KSNavigationController.h"
+#import "KSTableViewCell.h"
 #endif

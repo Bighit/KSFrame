@@ -1,7 +1,7 @@
 
 
 
-#define kImagePrex              @"http://www.baidu.com/"
+
 
 #define kMainWebsite            @"http://phone.cpdyj.com/"//线上地址
 

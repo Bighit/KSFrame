@@ -13,11 +13,11 @@
 //    LSLoginOptionUserName
 //};
 
-@interface KSphoneLogin : NSObject
+@interface KSphoneLogin : KSRespBase
 
-@property (nonatomic,strong) NSString *status;//状态
-@property (nonatomic,strong) NSString *balance;//余额
+@property (nonatomic,copy) NSString *status;//状态
+@property (nonatomic,copy) NSString *balance;//余额
 @property (nonatomic,assign) NSInteger redbagNum;
-@property (nonatomic,strong) NSString *message;//错误代码
+@property (nonatomic,copy) NSString *message;//错误代码
 
 @end

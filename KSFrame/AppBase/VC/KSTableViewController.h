@@ -9,8 +9,9 @@
 #import "KSRefreshViewController.h"
 #import "KSTableView.h"
 @interface KSTableViewController : KSRefreshViewController
-@property(nonatomic,strong)KSTableView *tableView;
-@property(nonatomic,assign)NSUInteger pageCount;
+@property(nonatomic, strong) KSTableView    *tableView;
+@property(nonatomic, assign) NSUInteger     pageCount;
+-(NSArray *)analyseTableData:(id)object;
 - (void)setTableViewDataSource;
 - (void)setTableViewDelegate;
 @end

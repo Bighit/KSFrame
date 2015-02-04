@@ -17,13 +17,14 @@ kSingleton(KSRequest)
 {
     NSString                        *urlTemp = [path encodeStringWithUTF8];
     AFHTTPRequestOperationManager   *manager = [AFHTTPRequestOperationManager manager];
+
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:urlTemp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         success(dic);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        fail(error.description);
+        NSLog(@"Error: %@,%@", error.localizedDescription, error.localizedDescription);
+        fail(error.localizedDescription);
     }];
 }
 
@@ -34,14 +35,15 @@ kSingleton(KSRequest)
 {
     NSString                        *urlTemp = [[self actionName:objClass] encodeStringWithUTF8];
     AFHTTPRequestOperationManager   *manager = [AFHTTPRequestOperationManager manager];
+
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:urlTemp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLogData(responseObject);
-        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         success([self reflectDataObject:objClass FromOtherObject:dic]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        fail(error.description);
+        NSLog(@"Error: %@,%@", error.localizedDescription, error.localizedDescription);
+        fail(error.localizedDescription);
     }];
 }
 
@@ -53,11 +55,14 @@ kSingleton(KSRequest)
     NSString                        *urlTemp = [path encodeStringWithUTF8];
     AFHTTPRequestOperationManager   *manager = [AFHTTPRequestOperationManager manager];
 
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:urlTemp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLogData(responseObject);
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         success(dic);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        fail(error.description);
+        NSLog(@"Error: %@,%@", error.localizedDescription, error.localizedDescription);
+        fail(error.localizedDescription);
     }];
 }
 
@@ -69,40 +74,58 @@ kSingleton(KSRequest)
     NSString                        *urlTemp = [[self actionName:objClass] encodeStringWithUTF8];
     AFHTTPRequestOperationManager   *manager = [AFHTTPRequestOperationManager manager];
 
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:urlTemp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        id obj = [[objClass alloc]init];
-        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        success([self reflectDataObject:obj FromOtherObject:dic]);
+        NSLogData(responseObject);
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        success([self reflectDataObject:objClass FromOtherObject:dic]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        fail(error.description);
+        NSLog(@"Error: %@,%@", error.localizedDescription, error.localizedDescription);
+        fail(error.localizedDescription);
     }];
 }
 
 - (id)reflectDataObject:(Class)class FromOtherObject:(id)dataSource
 {
     if ([dataSource isKindOfClass:[NSArray class]]) {
-       NSMutableArray *arr=[NSMutableArray array];
+        NSMutableArray *arr = [NSMutableArray array];
+
         for (id obj in dataSource) {
             [arr addObject:[self reflectDataObject:class FromOtherObject:obj]];
         }
+
         return arr;
-    }else if ([dataSource isKindOfClass:[NSDictionary class]]) {
-        id data=[[class alloc]init];
-        for (NSString *key in [self getPropertyList :class]) {
-               BOOL ret = ([dataSource valueForKey:key] == nil) ? NO : YES;
-            
-                if (ret) {
-                    id propertyValue = [dataSource valueForKey:key];
-                    [data setValue:[self reflectDataObject:class FromOtherObject:propertyValue] forKey:key];
-                    // 该值不为NSNULL，并且也不为nil
-                }
+    } else if ([dataSource isKindOfClass:[NSDictionary class]]) {
+        id data = [[class alloc]init];
+
+        for (NSString *key in [self getPropertyList : class]) {
+            BOOL ret = ([dataSource valueForKey:key] == nil) ? NO : YES;
+
+            if (ret) {
+                id propertyValue = [dataSource valueForKey:key];
+                [data setValue:[self reflectDataObject:class FromOtherObject:propertyValue] forKey:key];
+                // 该值不为NSNULL，并且也不为nil
             }
+        }
+
+        // 父类 *获取请求失败信息
+        for (NSString *key in [self getPropertyList :[class superclass]]) {
+            BOOL ret = ([dataSource valueForKey:key] == nil) ? NO : YES;
+
+            if (ret) {
+                id propertyValue = [dataSource valueForKey:key];
+                [data setValue:[self reflectDataObject:class FromOtherObject:propertyValue] forKey:key];
+                // 该值不为NSNULL，并且也不为nil
+            }
+        }
+
         return data;
-    }else {
+    } else {
         if (![dataSource isKindOfClass:[NSNull class]] && (dataSource != nil)) {
             return dataSource;
         }
     }
+
     return @"";
 }
 
@@ -121,6 +144,7 @@ kSingleton(KSRequest)
     free(properties);
     return propertyNamesArray;
 }
+
 /**
  *  通过约定好的类的命名格式，通过类名，类获取请求参数类对象对应的action
  *  获取actionName的思路是将类名从第九个字符开始截去，也即是将TReqParam这9位字符串截去
@@ -130,19 +154,17 @@ kSingleton(KSRequest)
  */
 - (NSString *)actionName:(Class)class
 {
-    NSString *t_actionName = nil;
-    const char *t_className = class_getName(class);
-    if (strlen(t_className) <= 2)
-    {
+    NSString    *t_actionName = nil;
+    const char  *t_className = class_getName(class);
+
+    if (strlen(t_className) <= 2) {
         t_actionName = @"";
-    }
-    else
-    {
+    } else {
         unsigned long t_strLength = strlen(t_className);
-        //因为我们使用的是strncpy函数拷贝字符串的，因此我们需要分配的空间比实际字符数多1
-        //因为最后以为我们要添加字符串结束标志'\0'
-        //如果使用strcpy函数，那么就不必考虑这个问题了，字符串该多长就分配多长的空间
-        //并且也不需要手动在最后一个位置加'\0'
+        // 因为我们使用的是strncpy函数拷贝字符串的，因此我们需要分配的空间比实际字符数多1
+        // 因为最后以为我们要添加字符串结束标志'\0'
+        // 如果使用strcpy函数，那么就不必考虑这个问题了，字符串该多长就分配多长的空间
+        // 并且也不需要手动在最后一个位置加'\0'
         char *t_action = (char *)malloc((t_strLength - 1) * sizeof(char));
         strncpy(t_action, t_className + 2, t_strLength - 2);
         t_action[t_strLength - 2] = '\0';
@@ -150,6 +172,7 @@ kSingleton(KSRequest)
         t_actionName = [NSString stringWithUTF8String:t_action];
         free(t_action);
     }
+
     return [NSString stringWithFormat:@"%@%@.php", kMainWebsite, t_actionName];
 }
 

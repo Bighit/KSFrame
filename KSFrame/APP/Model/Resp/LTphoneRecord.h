@@ -7,18 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+@interface LTphoneRecord : KSRespBase
 
-@interface LTphoneRecord : NSObject
-
-@property (nonatomic,strong) NSString *type;
-@property (nonatomic,strong) NSString *term_no;
-@property (nonatomic,strong) NSString *openPrizeTime;
-@property (nonatomic,strong) NSString *tzfs;
-@property (nonatomic,strong) NSString *time;
-@property (nonatomic,strong) NSString *amount;
-@property (nonatomic,strong) NSString *status;
-@property (nonatomic,strong) NSString *result;
-@property (nonatomic,strong) NSString *winMoney;
-@property (nonatomic,strong) NSString *number;
+@property (nonatomic,copy) NSString *type;
+@property (nonatomic,copy) NSString *term_no;
+@property (nonatomic,copy) NSString *openPrizeTime;
+@property (nonatomic,copy) NSString *tzfs;
+@property (nonatomic,copy) NSString *time;
+@property (nonatomic,copy) NSString *amount;
+@property (nonatomic,copy) NSString *status;
+@property (nonatomic,copy) NSString *result;
+@property (nonatomic,copy) NSString *winMoney;
+@property (nonatomic,copy) NSString *number;
 
 @end

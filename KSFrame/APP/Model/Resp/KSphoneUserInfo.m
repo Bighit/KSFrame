@@ -9,4 +9,9 @@
 #import "KSphoneUserInfo.h"
 
 @implementation KSphoneUserInfo
+
++(NSDictionary *)requestParams
+{
+    return @{@"user":@"test_qiu", @"password":[@"654321" stringFromMD5], @"version":@"13"};
+}
 @end
