@@ -19,7 +19,7 @@
     // 将view替换成scrollview
     self.tableView = [[KSTableView alloc]init];
     self.view = self.tableView;
-    [_tableView setBackgroundColor:[UIColor whiteColor]];
+    [_tableView setBackgroundColor:kAppBgColor];
     //上拉加载 下拉刷新
     WS(_self)
 
@@ -34,6 +34,7 @@
     self.pageCount = 1;
     [self setTableViewDataSource];
     [self setTableViewDelegate];
+ 
     // Do any additional setup after loading the view.
 }
 
@@ -64,7 +65,7 @@
 {
     // 子类完成
     [self.tableView.tableDelegate setCellHeightBlock:^CGFloat (NSIndexPath *indexPath) {
-        return 40;
+        return 40.0;
     }];
 }
 
@@ -79,17 +80,14 @@
 - (void)pullToRefresh
 {
     WS(_self)
-    [mKeyWindow addSubview : self.progressHUD];
-    [self.progressHUD show:YES];
+    [Singleton(KSGlobal).progressHUD show:YES];
     [Singleton(KSRequest)requestDataWithParams:self.params Class:[self.data class] finished:^(id object) {
         [_tableView.tableItems setArray:[_self analyseTableData:object]];
         [_self refresh];
-        [_self.progressHUD hide:YES];
-        [_self.progressHUD removeFromSuperview];
+        [Singleton(KSGlobal).progressHUD hide:YES];
     } failed:^(NSString *error) {
         mAlertView(@"提示", @"网络无法连接");
-        [_self.progressHUD hide:YES];
-        [_self.progressHUD removeFromSuperview];
+        [Singleton(KSGlobal).progressHUD hide:YES];
     }];
 }
 
@@ -114,18 +112,16 @@
 - (void)loadMore
 {
     WS(_self)
-    [mKeyWindow addSubview : self.progressHUD];
-    [self.progressHUD show:YES];
+    [Singleton(KSGlobal).progressHUD show:YES];
     [Singleton(KSRequest)requestDataWithParams:self.params Class:[self.data class] finished:^(id object) {
         [_tableView.tableItems addObjectsFromArray:[_self analyseTableData:object]];
 
         [_self refresh];
-        [_self.progressHUD hide:YES];
-        [_self.progressHUD removeFromSuperview];
+        [Singleton(KSGlobal).progressHUD hide:YES];
+
     } failed:^(NSString *error) {
         NSLog(@"网络问题");
-        [_self.progressHUD hide:YES];
-        [_self.progressHUD removeFromSuperview];
+        [Singleton(KSGlobal).progressHUD hide:YES];
     }];
 }
 

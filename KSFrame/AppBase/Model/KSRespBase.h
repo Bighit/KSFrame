@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "KSUserDataManager.h"
 @interface KSRespBase : NSObject
 @property(nonatomic,copy)NSString * status;
 @property(nonatomic,copy)NSString * message;

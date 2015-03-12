@@ -15,6 +15,7 @@
 #define kUserPortraitUrl    @"userPortraitUrl"
 #define kUserEmail          @"userEmail"
 #define kUserGender         @"userGender"
+#define kUserLogin          @"userLogin"
 
 
 /*---------------------------------程序相关常数-------------------------------------*/
@@ -46,7 +47,7 @@
 #define kBtnTitleHighlightColor  [UIColor colorWithRed:255/255.0 green:96/255.0 blue:0/255.0 alpha:1]
 
 //设置应用的页面背景色
-#define kAppBgColor  [UIColor colorWithRed:154/255.0 green:154/255.0 blue:154/255.0 alpha:1]
+#define kAppBgColor  [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1]
 
 
 //TableView相关设置

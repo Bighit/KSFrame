@@ -79,13 +79,10 @@
     }
     return YES;
 }
-
 - (BOOL)isEmptyOrWhitespace {
     return !self.length ||
     ![self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length;
 }
-
-
 - (BOOL)containsString:(NSString*)string {
     return [self containsString:string options:NSCaseInsensitiveSearch];
 }

@@ -10,18 +10,6 @@
 
 @implementation KSViewController
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    if (self.navigationController && !self.navigationController.navigationBar.hidden) {
-        self.navigationController.navigationBar.translucent = NO;
-    }
-
-    if (self.navigationController && !self.navigationController.navigationBar.hidden) {
-        self.tabBarController.tabBar.translucent = NO;
-    }
-}
 
 - (void)showBarButton:(KSNavigationBarItemPositon)position title:(NSString *)name fontColor:(UIColor *)color
 {
@@ -36,10 +24,21 @@
 
     [self showBarButton:position button:button];
 }
-
+- (void)showBarButton:(KSNavigationBarItemPositon)position view:(UIView *)view
+{
+    if (KSNavigationBarItemPositonLeft == position) {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
+    if (mSystemVersion >= 7) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
+    }else
+    {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];
+    }
+}
 - (void)showBarButton:(KSNavigationBarItemPositon)position button:(UIButton *)button
 {
-    if (NAV_LEFT == position) {
+    if (KSNavigationBarItemPositonLeft == position) {
         [button addTarget:self action:@selector(leftButtonClicked) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
@@ -47,7 +46,7 @@
         if (mSystemVersion >= 7) {
             self.navigationController.interactivePopGestureRecognizer.delegate = nil;
         }
-    } else if (NAV_RIGHT == position) {
+    } else if (KSNavigationBarItemPositonLeft == position) {
         [button addTarget:self action:@selector(rightButtonClicked) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.rightBarButtonItem = nil;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
@@ -82,5 +81,19 @@
         self.navigationItem.titleView = titleView;
     }
 }
-
+-(void)navigationReplace:(UIViewController *)vc inIndex:(NSUInteger)index
+{
+    NSArray *currentControllers = self.navigationController.viewControllers;
+    NSMutableArray *newControllers = [NSMutableArray arrayWithArray:currentControllers];
+    [newControllers replaceObjectAtIndex:index withObject:vc];
+    self.navigationController.viewControllers = newControllers;
+}
+-(void)navigationReplaceCurrentControllerWith:(UIViewController *)vc
+{
+    [self.navigationController pushViewController:vc animated:YES];
+    NSArray *currentControllers = self.navigationController.viewControllers;
+    NSMutableArray *newControllers = [NSMutableArray arrayWithArray:currentControllers];
+    [newControllers removeObjectAtIndex:[newControllers count]-2];
+    self.navigationController.viewControllers = newControllers;
+}
 @end

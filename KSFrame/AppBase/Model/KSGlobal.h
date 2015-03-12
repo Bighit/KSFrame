@@ -25,6 +25,7 @@ typedef NS_ENUM (NSInteger, LotteryType) {
 };
 @interface KSGlobal : NSObject
 @property(nonatomic,assign)LotteryType currentLotteryType;
-
+@property(nonatomic,strong)MBProgressHUD *progressHUD;
+@property(nonatomic,strong)NSTimer *msgTimer;
 CSingleton(KSGlobal)
 @end

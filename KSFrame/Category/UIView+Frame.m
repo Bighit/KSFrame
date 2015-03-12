@@ -233,6 +233,6 @@ UIInterfaceOrientation TTDeviceOrientation() {
 }
 + (id)viewWithNib
 {
-    return [[[NSBundle mainBundle] loadNibNamed:[self description] owner:nil options:nil]lastObject];
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil]lastObject];
 }
 @end

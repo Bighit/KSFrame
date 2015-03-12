@@ -17,7 +17,6 @@
 #import <IQKeyboardManager.h>
 #import <SVPullToRefresh.h>
 #import <Masonry.h>
-
 //************ Category **********
 #import "NSData+Addition.h"
 #import "NSDate+Addition.h"
@@ -38,8 +37,5 @@
 
 //************ BaseClass *********
 #import "KSGlobal.h"
-#import "KSRespBase.h"
-#import "KSTableViewController.h"
-#import "KSNavigationController.h"
-#import "KSTableViewCell.h"
+#import "KSRequest.h"
 #endif

@@ -9,6 +9,13 @@
 #import "KSTableView.h"
 
 @implementation KSTableView
+-(void)awakeFromNib
+{
+    [self initTableViewDataSource];
+    [self initTableViewDelegate];
+    self.tableItems = [[NSMutableArray alloc]init];
+    [self setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+}
 - (instancetype)init
 {
     self = [super init];
@@ -17,6 +24,8 @@
         [self initTableViewDataSource];
         [self initTableViewDelegate];
         self.tableItems = [[NSMutableArray alloc]init];
+        [self setSeparatorStyle:UITableViewCellSeparatorStyleNone];	
+      
     }
 
     return self;

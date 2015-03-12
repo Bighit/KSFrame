@@ -58,8 +58,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellClassName];
-
-    if (!cell) {
+        if (!cell) {
         cell = [[NSClassFromString(_cellClassName) alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellClassName];
     }
 

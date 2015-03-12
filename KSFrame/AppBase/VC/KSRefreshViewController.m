@@ -22,8 +22,9 @@
     [mainScrollView addPullToRefreshWithActionHandler :^{
         [_self performSelector:@selector(pullToRefresh) withObject:nil afterDelay:0.2];
     }];
-    // hud
-    self.progressHUD = [[MBProgressHUD alloc]initWithView:self.view];
+    
+    
+
 }
 
 - (void)viewDidLoad
@@ -42,17 +43,18 @@
 - (void)pullToRefresh
 {
     WS(_self)
-    [mKeyWindow addSubview : _progressHUD];
-    [_progressHUD show:YES];
+    
+    [Singleton(KSGlobal).progressHUD show:YES];
     [Singleton(KSRequest)requestDataWithParams:self.params Class:[_data class] finished:^(id object) {
         _self.data = object;
+        if (_self.data.message) {
+            mAlertView(@"提示", _self.data.message);
+        }
         [_self refresh];
-        [_progressHUD hide:YES];
-        [_progressHUD removeFromSuperview];
+        [Singleton(KSGlobal).progressHUD hide:YES];
     } failed:^(NSString *error) {
         mAlertView(@"提示", @"网络无法连接");
-        [_progressHUD hide:YES];
-        [_progressHUD removeFromSuperview];
+        [Singleton(KSGlobal).progressHUD hide:YES];
     }];
 }
 

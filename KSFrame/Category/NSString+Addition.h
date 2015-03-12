@@ -38,12 +38,7 @@
  */
 - (BOOL)isWhitespace;
 
-/**
- * 判断字符串是空的或只包含空格。
- */
 - (BOOL)isEmptyOrWhitespace;
-
-\
 
 
 /**

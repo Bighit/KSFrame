@@ -81,7 +81,7 @@ otherButtonTitles:nil]; \
 
 //调试模式下输入NSLog，发布后不再输入。
 #ifndef debug
-#define NSLog(fmt, ...) NSLog((@"[File:%s]\n[Function:%s][Line:%d]\n^^^^^^^^^^^^^^^^^^^\n " fmt @"\n_____________________"), __FILE__,__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define NSLog(fmt, ...) NSLog((@"[Function:%s][Line:%d]\n^^^^^^^^^^^^^^^^^^^\n " fmt @"\n_____________________"),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define NSLogData(data) NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding])
 #else
 #define NSLog(fmt, ...) {}
